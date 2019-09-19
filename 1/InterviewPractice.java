@@ -28,10 +28,11 @@ public class InterviewPractice {
 		System.out.println(hasPairWithSum2(array2, SUM));
 		*/
 		
-		
+		/*
+		 * solution 3: Unsorted Array ,O(n)=n
 		System.out.println(hasPairWithSum3(array3, SUM));
 		System.out.println(hasPairWithSum3(array4, SUM));
-		
+		*/
 	}
 	public static boolean hasPairWithSum1(int a[], int sum) {
 		for (int i = 0; i < a.length; i++) {
