@@ -1,5 +1,7 @@
 package interview;
 
+import java.util.HashSet;
+
 public class InterviewPractice {
 
 	public static void main(String[] args) {
@@ -7,6 +9,8 @@ public class InterviewPractice {
 		
 		int array1[] = {1,2,3,9};
 		int array2[] = {1,2,4,4};
+		int array3[] = {9,1,3,2};
+		int array4[] = {4,2,4,1};
 		final int SUM = 8;
 		
 		/*
@@ -16,14 +20,17 @@ public class InterviewPractice {
 		*/
 		
 
-		
+		/*
 		//solution 2: largest possible sum , O(n)=n
 		// {1,2,3,9}
 		// ^		^
 		System.out.println(hasPairWithSum2(array1, SUM));
 		System.out.println(hasPairWithSum2(array2, SUM));
+		*/
 		
 		
+		System.out.println(hasPairWithSum3(array3, SUM));
+		System.out.println(hasPairWithSum3(array4, SUM));
 		
 	}
 	public static boolean hasPairWithSum1(int a[], int sum) {
@@ -50,6 +57,22 @@ public class InterviewPractice {
 		}
 		
 		return false;
+	}
+
+	public static boolean hasPairWithSum3(int a[], int sum) {
+	
+		HashSet<Integer> comp= new HashSet<Integer>();
+		
+		
+		for (int i = 0; i < a.length; i++) {
+			if(!comp.contains(a[i]))
+				comp.add(sum-a[i]);
+			else
+				return true;
+				
+		}
+		return false;
+		
 	}
 
 }
