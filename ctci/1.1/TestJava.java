@@ -8,10 +8,7 @@ public class TestJava {
 		/*
 		 * Cracking the coding interview solution to problem 1.1: is unique
 		 * 
-
-		System.out.println(isUnique(s1));
-		System.out.println(isUnique(s2));
-		*/
+		 */
 		String s1 = "character";
 		String s2 = "sarmen";
 		long millis1 = System.nanoTime();
@@ -27,7 +24,7 @@ public class TestJava {
 		System.out.println(millis4);
 
 	}
-	
+	//our solution
 	public static boolean isUnique(String s) {
 		HashSet<Character> characters = new HashSet<Character>();
 		
@@ -42,14 +39,14 @@ public class TestJava {
 		return true;
 		
 	}
-	
+	//Gayle's solution
 	public static boolean isUniqueChars(String str) {
 		 if (str.length() > 128) return false;
 		
 		 boolean[] char_set = new boolean[128];
 		 for (int i = 0; i < str.length(); i++) {
 			 int val = str.charAt(i);
-			 if (char_set[val]) {// Already found this char in string
+			 if (char_set[val]) {	// Already found this char in string
 				 return false;
 				 }
 				 	char_set[val] = true;
