@@ -6,16 +6,21 @@ import java.util.Iterator;
 public class InterviewPractice {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		/*
+		 * Cracking the coding interview solution to problem 1.4: Palindrome Permutation
+		 * 
+		 */
 		String s = "eva, can i see bees in a cave?";
 		char str[]=s.toLowerCase().toCharArray();
-	
-		
 		
 		System.out.println(palindromePermutation(str));
 		
 	}
+		/*
+		 * This is our solution without looking at Gayle's
+		 * Though, her influence in teaching us solutions
+		 * can be obsereved in our code. (Thanks Gayle) 
+		 */
 	public static boolean palindromePermutation(char[] str1) {
 		
 		//we create an int array for each Ascii charachter[128]
